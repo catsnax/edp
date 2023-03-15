@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>EDFitness</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Jost:wght@400;700&display=swap');
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <div id="Navigation-Bar" class="flex items-center space-x-24 sticky top-0 bg-[#121820]">
+            <div id="Nav-Logo" class="flex items-center mr-auto p-[1%] pl-[2%]">
+                <div class="font-bold text-[275%]"> ED </div>
+                <div class="text-[200%] text-transparent bg-clip-text bg-gradient-to-br from-[#7564FB] to-[#D81CEF]"> FITNESS </div>
+            </div> 
+    
+            <div class="flex gap-16 text-[125%] pr-[3%]">
+                <a href = "Home.html"> <div id ="Nav-Home"> Home </div> </a>
+                <a href = "About.html"><div id="Nav-About"> About </div></a>
+                <a href = "Contact-us.html"><div id="Nav-Contact"> Contact Us </div></a>
+            </div>
+        </div>
+    
+        <div id="Full-Content" class="bg-[#121820]">
+
+            <!-- First Content -->
+            <div id="First-Section">
+                <div class="flex font-bold h-15 justify-center items-center text-[250%] pt-[3%]"> MAXIMIZE YOUR </div>
+                <div class="flex font-bold h-10 justify-center items-center text-[425%]"> BODY FITNESS </div>
+                <p class="flex text-center px-[20%] pt-[2%]"> Your BMI score is significant because it gives you an idea of whether your weight falls within a healthy range or not. 
+                    By knowing this, you can determine the potential health risks associated with your weight and make informed decisions about your diet and lifestyle, 
+                    ultimately leading to an improvement in your overall health. Try our BMI Calculator now! 
+                </p>
+                <div class="flex justify-center pt-[2%]">
+                    <img class="Button-GS" id="getStarted" src="https://cdn.discordapp.com/attachments/1061941526051168258/1082694284983152822/State_-_Get_Started.png"></img>
+                </div>
+            </div>
+
+            <!-- Second Content -->
+            <div id="Second-Section">
+                <div class="flex font-bold h-15 justify-center items-center text-[250%] pt-[8%]"> INTRODUCTION TO BMI </div>
+                <p class="flex text-left px-[20%] pt-[2%]">
+                    BMI is a commonly used measurement in assessing an individual's body composition. 
+                    It is calculated by dividing an individual's weight in kilograms by their height in meters squared. 
+                    This measurement provides an estimate of the amount of tissue mass in an individual's body, and it is used to categorize individuals as 
+                    underweight, normal weight, overweight, or obese based on which range their BMI falls in. 
+                    The classification of BMI values may vary based on factors such as age and region, with some categories further divided into subcategories such as severely underweight or very severely obese.
+                    <br><br>
+                    It is important to note that BMI is not a perfect measure of healthy body weight. 
+                    It does not take into account factors such as muscle mass or body composition, which may affect an individual's overall health. 
+                    For example, a highly trained athlete with a large amount of muscle mass may have a high BMI, even though they are not overweight or obese. 
+                    Additionally, BMI may not be accurate for certain populations, such as the elderly or pregnant women.
+                    <br><br>
+                    Despite its imperfections, BMI is widely used as a general indicator of an individual's weight status. 
+                    Being overweight or underweight can have significant health implications, and BMI can be useful in identifying individuals who may require further testing or intervention. 
+                    For example, individuals with a BMI in the overweight or obese category may be at increased risk for conditions such as heart disease, diabetes, and certain types of cancer. 
+                    In such cases, additional testing or intervention may be necessary to manage the individual's weight and overall health.
+                    <br><br>
+                    Overall, BMI is a useful tool in assessing an individual's weight status, but it should not be used as the sole determinant of healthy body weight. 
+                    Other factors, such as body composition and overall health, should also be considered when determining an individual's weight status and appropriate intervention.
+                </p>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div id="Bottom-Bar" class="pt-[5%]">
+                <div class="flex gap-[15%] text-[125%] bg-[#1d2128] py-[2%] px-[5%]">
+                    <div>
+                        <div class="font-bold text-[80%]"> STAY CONNECTED </div>
+                        <p class="text-[70%] pb-[2%]"> Join over 10,000 people who receives our monthly fitness tips. </p>
+                        <div class="flex">
+                            <input id="email" class="text-[70%] text-[#545a64] placeholder-[#545a64] w-[300px] h-[40px] 
+                            px-2 py-2 bg-[#262a30] rounded focus:outline-none" type="email" placeholder="Email Address" autocomplete="off">
+
+                            <div class="flex justify-center pl-[2%]">
+                                <img class="Button-SU" id="signUp" src="https://cdn.discordapp.com/attachments/1061941526051168258/1082738646647590942/State_-_Sign_Up.png"></img>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="font-bold text-[80%]"> BASED IN THE PHILIPPINES</div>
+                        <p class="text-[70%]"> The team is based in the Philippines due to the country's favorable business environment 
+                            and government incentives, as well as its access to a talented and skilled workforce, enabling it to 
+                            operate efficiently and competitively in the global market. 
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center bg-[#1e2127] text-[90%]"> © 2023 EDFitness Program </div>
+            </div>
+            
+        </div>
+
+    </body>
+
+    <style>
+        body {
+            background-color: #1d2128;
+            font-family: Inter;
+            color: white
+        }
+
+        .Button-GS{
+            max-width: 170px;
+            height: 60px;
+        }.Button-GS:hover {
+            content: url("https://cdn.discordapp.com/attachments/1061941526051168258/1082694306420232202/Hover_-_Get_Started.png");
+        }
+
+        .Button-SU{
+            max-width: 800px;
+            height: 40px;
+        }.Button-SU:hover {
+            content: url("https://cdn.discordapp.com/attachments/1061941526051168258/1082738646211375125/Hover_-_Sign_Up.png");
+        }
+
+    </style>
+    <script>
+        console.log(localStorage);
+        button = document.getElementById("getStarted");
+
+        button.addEventListener("click", () =>{
+            window.location.href = "BMICalculator.html";
+        })
+
+        logo = document.getElementById("Nav-Logo");
+        logo.addEventListener('click', () =>{
+            window.location.href = "Home.html";
+        })
+    </script>
+</html>

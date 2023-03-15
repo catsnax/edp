@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+
+
+    <input type = "text" id = "username">
+    <input type = "text" id = "password">
+    <button id = "button"> SIGN IN</button>
+    
+
+
+<script>
+    username = document.getElementById("username");
+    password = document.getElementById("password");
+    button = document.getElementById("button");
+
+    console.log(localStorage);
+
+    button.addEventListener("click", () =>{
+        counter = localStorage.getItem("number")
+        found = false;
+
+        for(i = 0; i < counter; i++){
+        user = localStorage.getItem(i);
+        let myObject = JSON.parse(user);
+        nameChecker = myObject.name;
+        passChecker = myObject.pass;
+
+        if(nameChecker == username.value){
+            found = true;
+            if(passChecker == password.value){
+                localStorage.setItem("Logged In", i);
+                window.location.href = "Home.html";
+            }
+            else{
+                alert("Wrong Password!")
+            }
+        }
+    } 
+        if(found == false) {alert("Username Does Not Exist!");}
+
+
+    })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

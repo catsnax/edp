@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>BMI Score | EDFitness</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Jost:wght@400;700&display=swap');
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <div id="Navigation-Bar" class="flex items-center space-x-24 sticky top-0 bg-[#121820]">
+            <div id="Nav-Logo" class="flex items-center mr-auto p-[1%] pl-[2%]">
+                <div class="font-bold text-[275%]"> ED </div>
+                <div class="text-[200%] text-transparent bg-clip-text bg-gradient-to-br from-[#7564FB] to-[#D81CEF]"> FITNESS </div>
+            </div>
+    
+            <div class="flex gap-16 text-[125%] pr-[3%]">
+                <a href = "Home.html"> <div id = "Nav-Home"> Home </div> </a>
+                <a href = "About.html"><div id="Nav-About"> About </div></a>
+                <div id="Nav-Contact"> Contact Us </div>
+            </div>
+        </div>
+        
+        <div id="Full-Content" class="bg-[#121820]">
+            <div class="flex font-bold h-15 justify-center items-center text-[150%] pt-[3%]"> Your BMI Score is </div>
+            <div id="bmiContainer" class="flex font-bold h-[80px] justify-center items-center text-[600%]"> </div>
+            <div id="categoryContainer" class="flex font-bold h-15 justify-center items-center text-[250%] pt-[3%]"> </div>
+        </div>
+
+        <div class = "flex gap-8 justify-center">
+            <a href="Lose.html"> LOSE WEIGHT </a> 
+            <div> MAINTAIN WEIGHT </div>
+            <div> GAIN WEIGHT </div>
+        </div>
+
+        
+
+        <script> 
+            // BMI Container
+            bmiContainer = document.getElementById("bmiContainer");
+            accountNumber = localStorage.getItem("Logged In");
+            myAccount = localStorage.getItem(accountNumber);
+
+            let myObject = JSON.parse(myAccount);
+
+            bmiText = document.createElement('h1');
+            bmiValue = myObject.Ubmi
+
+            bmiText.textContent = bmiValue;
+
+            bmiContainer.append(bmiText);
+
+            // Category Container
+            categoryContainer = document.getElementById("categoryContainer");
+
+            categoryText = document.createElement('h1');
+            categoryValue = localStorage.getItem("diagnosis");
+
+            categoryText.textContent = categoryValue;
+
+            categoryContainer.append(categoryText);
+        </script>
+        
+        
+
+        <!-- Bottom Bar -->
+        <div id="Bottom-Bar" class="pt-[5%]">
+            <div class="flex gap-[15%] text-[125%] bg-[#1d2128] py-[2%] px-[5%]">
+                <div>
+                    <div class="font-bold text-[80%]"> STAY CONNECTED </div>
+                    <p class="text-[70%] pb-[2%]"> Join over 10,000 people who receives our monthly fitness tips. </p>
+                    <div class="flex">
+                        <input id="email" class="text-[70%] text-[#545a64] placeholder-[#545a64] w-[300px] h-[40px] 
+                        px-2 py-2 bg-[#262a30] rounded focus:outline-none" type="email" placeholder="Email Address" autocomplete="off">
+
+                        <div class="flex justify-center pl-[2%]">
+                            <img class="Button-SU" id="signUp" src="https://cdn.discordapp.com/attachments/1061941526051168258/1082738646647590942/State_-_Sign_Up.png"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="font-bold text-[80%]"> BASED IN THE PHILIPPINES</div>
+                    <p class="text-[70%]"> The team is based in the Philippines due to the country's favorable business environment 
+                        and government incentives, as well as its access to a talented and skilled workforce, enabling it to 
+                        operate efficiently and competitively in the global market. 
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-center bg-[#1e2127] text-[90%]"> © 2023 EDFitness Program </div>
+        </div>
+
+    </body>
+
+    <style>
+        body {
+            background-color: #1d2128;
+            font-family: Inter;
+            color: white
+        }
+
+        .Button-SU{
+            max-width: 800px;
+            height: 40px;
+        }.Button-SU:hover {
+            content: url("https://cdn.discordapp.com/attachments/1061941526051168258/1082738646211375125/Hover_-_Sign_Up.png");
+        }
+
+        
+    </style>"
+    <script>
+        logo = document.getElementById("Nav-Logo");
+        logo.addEventListener('click', () =>{
+            window.location.href = "Home.html";
+        })
+    </script>
+</html>

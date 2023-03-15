@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+
+
+    <input type = "text" id = "username">;
+    <input type = "text" id = "password">;
+    <button id = "button"> SIGN UP </button>
+    
+
+
+
+<script>
+    username = document.getElementById("username");
+    password = document.getElementById("password");
+    button = document.getElementById("button");
+
+    localStorage.setItem("number", 0);
+    //localStorage.clear();
+
+    button.addEventListener("click", () =>{    
+        console.log(username);
+        counter = localStorage.getItem("number");
+        let taken = false;
+        
+        for(i = 0; i < counter; i++){
+            user = localStorage.getItem(i);
+            let myObject = JSON.parse(user);
+            checker = myObject.name;
+            console.log(checker);
+
+
+            if(checker == username.value){
+                alert("username has already been taken");
+                taken = true;
+                break;
+                }
+            }
+            
+        if (taken == false){
+        newUser = {
+            name: username.value,
+            pass: password.value
+        };
+        let stringed = JSON.stringify(newUser);
+        localStorage.setItem(counter, stringed);
+            
+        counter++;
+        localStorage.setItem("number", String(counter));
+            
+        console.log(localStorage);
+
+        }})
+
+
+        
+
+
+    </script>
+</body>
+</html>
