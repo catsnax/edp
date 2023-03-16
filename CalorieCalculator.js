@@ -1,9 +1,14 @@
-age = parseInt(localStorage.getItem("age"));
-weight = parseFloat(localStorage.getItem("weight"));
-height = parseFloat(localStorage.getItem("height"))
-sex = localStorage.getItem("sex");
+accountNumber = localStorage.getItem("Logged In");
+myAccount = localStorage.getItem(accountNumber);
+
+let myObject = JSON.parse(myAccount);
+
+age = myObject.Uage;
+weight = myObject.Uweight;
+height = myObject.Uheight;
+sex = myObject.Usex;
         
-activityLevel = localStorage.getItem("activity level")
+activityLevel = myObject.UactivityLevel;
 
         
 if(sex == "male"){
@@ -38,14 +43,18 @@ switch(activityLevel){
 }
 
 proteinMinimal = (weight * 0.8 * activityFactor * sexFactor);
-proteinMaximum = (weight * 1.2 * activityFactor * sexFacto);
+proteinMaximum = (weight * 1.2 * activityFactor * sexFactor);
 
-localStorage.setItem("Minimum Protein", proteinMinimal);
-localStorage.setItem("Maximum Protein", proteinMaximum);
+myObject.minimumProtein =  proteinMinimal;
+myObject.maximumProtein =  proteinMaximum;
 
 
-localStorage.setItem("loss", mCalories - 200);        
-localStorage.setItem("maintenance", mCalories);
-localStorage.setItem("gain", mCalories + 200);
+myObject.loss =  mCalories - 200;        
+myObject.maintenance =  mCalories;
+myObject.gain = mCalories + 200;
 
+
+let stringed = JSON.stringify(myObject);
+localStorage.setItem(accountNumber, stringed);
+    
 console.log(localStorage);
