@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myChart"></canvas>
+    
+
+
+    <script>
+        // Get the canvas element
+const canvas = document.getElementById('myChart');
+
+
+accountNumber = localStorage.getItem("Logged In");
+myAccount = localStorage.getItem(accountNumber);
+
+let myObject = JSON.parse(myAccount);
+console.log(myObject);
+
+numberArray = [];
+dateArray = [];
+
+for(i = 0; i< myObject.number; i++){
+    numberArray[i] = myObject[i]
+}
+
+for(i = 10, j = 0; i < myObject.dateNumber; i++, j++){
+    dateArray[j] = myObject[i];
+}
+
+// Create the chart
+const myChart = new Chart(canvas, {
+  type: 'line', // Set the chart type to 'line'
+  data: {
+    labels: dateArray,
+    datasets: [{
+      label: 'Weight Changes', // Set the label for the dataset
+      data: numberArray, // Set the data for the dataset
+      borderColor: 'blue', // Set the color of the line
+      fill: false // Set to false to remove the fill color underneath the line
+    }]
+  },
+  options: {
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Monthly Sales'
+    },
+
+  }
+});
+
+
+
+
+
+    </script>
+</body>
+</html>
