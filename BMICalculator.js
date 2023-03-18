@@ -11,6 +11,11 @@ myAccount = localStorage.getItem(accountNumber);
 let myObject = JSON.parse(myAccount);
 userName = myObject.name;
 userPass = myObject.pass;
+counter = myObject.number;
+dateCounter = myObject.dateNumber;
+
+
+
 
 // creates feet and inches elements in DOM. feet element will also be used for centimeters input to avoid redundancy
 let feet = document.createElement("input");
@@ -68,9 +73,12 @@ button.addEventListener("click", () =>{
 
     // stores all of the data gathered in local storage
 
+    currentDate = new Date().toLocaleDateString();
     userObject = {
         name: userName,
         pass: userPass,
+        number : counter + 1,
+        dateNumber: dateCounter + 1,
         Ubmi: bmiValue,
         Udiagnosis: diagnosis,
         Uheight: height,
@@ -80,12 +88,23 @@ button.addEventListener("click", () =>{
         Uage: age
     }
 
+    for(i = 0; i < counter; i++){
+        userObject[i] = myObject[i];
+    }
+
+    for(j = 10; j < dateCounter; j++){
+        userObject[j] = myObject[j];
+    }
+    userObject[dateCounter] = currentDate;
+    userObject[counter] = weight;
+
+
     let stringed = JSON.stringify(userObject);
     localStorage.setItem(accountNumber, stringed);
     
     console.log(localStorage);
 
-    window.location.href = "BMIScore.html";
+    //window.location.href = "BMIScore.html";
 
 })
 
