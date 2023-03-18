@@ -104,7 +104,7 @@ button.addEventListener("click", () =>{
     
     console.log(localStorage);
 
-    //window.location.href = "BMIScore.html";
+    window.location.href = "BMIScore.html";
 
 })
 
