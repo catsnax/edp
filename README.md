@@ -1,2 +1,2 @@
 # edp
-Repository for EDP Project (BMI Calculator
+Repository for EDP Project (BMI Calculator)
