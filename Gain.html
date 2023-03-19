@@ -7,9 +7,30 @@
     <title>Gain Weight</title>
 </head>
 <body>
+    <div id = "container"></div>
     
 
-    <script src = "CalorieCalculator.js"> </script>
+    
+    <script>
+    accountNumber = localStorage.getItem("Logged In");
+    myAccount = localStorage.getItem(accountNumber);
+    let object = JSON.parse(myAccount);
+
+    gainValue = object.gain
+   
+    let container = document.getElementById('container');
+
+    let divElement = document.createElement('div');
+    divElement.textContent = gainValue;
+    container.append(divElement);
+
+
+
+
+
+
+    </script>
+    
 </body>
 
 
