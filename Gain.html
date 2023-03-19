@@ -24,7 +24,16 @@
     divElement.textContent = gainValue;
     container.append(divElement);
 
+    proteinMinimal = object.minimumProtein;
+    proteinMaximum = object.maximumProtein;
 
+    let minimumContainer = document.createElement('div');
+    minimumContainer.textContent = proteinMinimal + " to ";
+    container.append(minimumContainer);
+
+    let maximumContainer = document.createElement('div');
+    maximumContainer.textContent = proteinMaximum;
+    container.append(maximumContainer);
 
 
 

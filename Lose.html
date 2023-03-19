@@ -19,11 +19,23 @@
     lossValue = object.loss
     console.log(lossValue);
 
+
     let container = document.getElementById('container');
 
     let divElement = document.createElement('div');
     divElement.textContent = lossValue;
     container.append(divElement);
+
+    proteinMinimal = object.minimumProtein;
+    proteinMaximum = object.maximumProtein;
+
+    let minimumContainer = document.createElement('div');
+    minimumContainer.textContent = proteinMinimal + " to ";
+    container.append(minimumContainer);
+
+    let maximumContainer = document.createElement('div');
+    maximumContainer.textContent = proteinMaximum;
+    container.append(maximumContainer);
 
 
 
